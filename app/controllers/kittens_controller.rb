@@ -20,6 +20,11 @@ class KittensController < ApplicationController
 
     def show
         @kitten = Kitten.find(params[:id])
+        respond_to do |format|
+            format.html # index.html.erb
+            format.xml  { render :xml => @kitten }
+            format.json { render :json => @kitten }
+        end
     end
 
     def edit 
