@@ -1,0 +1,9 @@
+<li>
+Name <%= kitten.name %> -
+Age <%= kitten.age %> -
+Softness <%= kitten.softness %>/10 -
+Cuteness <%= kitten.cuteness %> /10
+<%= link_to 'edit', edit_kitten_path(kitten.id) %>
+<%= link_to 'show', kitten_path(kitten.id) %>
+<%= link_to 'delete', kitten, method: :delete, data: { confirm: "Are you sure ?"} %>
+</li>
